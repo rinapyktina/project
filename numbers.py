@@ -1,0 +1,8 @@
+num1=float(input())
+num2=float(input())
+num3=float(input())
+num4=float(input())
+s1=float(num1+num2)
+s2=float(num3+num4)
+a=float(s1/s2)
+print("%.2f" % (a))

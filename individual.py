@@ -1,0 +1,24 @@
+k1=[input("Введите координаты первой вершины x1:"), input('y1:')]
+k2=[input("Введите координаты второй вершины x2:"), input('y2:')]
+k3=[input("Введите координаты третьей вершины x3:"), input('y3:')]
+k4=[input("Введите координаты четвёртой вершины x4:"), input('y4:')]
+x1=k1[0]
+y1=k1[1]
+x2=k2[0]
+y2=k2[1]
+x3=k3[0]
+y3=k3[1]
+x4=k4[0]
+y4=k4[1]
+x1, x2, x3, x4, y1, y2, y3, y4 =[float(x) for x in [x1, x2, x3, x4, y1, y2, y3, y4]]
+import math
+ab=math.sqrt((x1 - x2)**2 + (y1 - y2)**2)
+bc=math.sqrt((x3 - x2)**2 + (y3 - y2)**2)
+ac=math.sqrt((x1 - x3)**2 + (y1 - y3)**2)
+cd=math.sqrt((x4 - x3)**2 + (y4 - y3)**2)
+ad=math.sqrt((x1 - x4)**2 + (y1 - y4)**2)
+p1=(ab +bc + ac)/2
+p2=(ac +cd +ad)/2
+s1=math.sqrt(p1 * (p1 - ab) * (p1 - bc) * (p1 - ac))
+s2=math.sqrt(p2 * (p2 - ac) * (p2 - cd) * (p2 - ad))
+print('Площадь четырёхугольника =', s1 + s2)
